@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    #menu_control{
+        position: absolute;
+        z-index: -2;
+        opacity: 0;
+    }
+    .header{
+        position: sticky;
+        top: 0px;
+        height: 50px;
+        background-color: #898989;
+        position: relative;
+    }
+    img{
+        width: 45px;
+        height: 45px;
+    }
+    .logo{
+        width: 60px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    .log a{
+        display: block;
+        height: 40px;
+    }
+    .logo img{
+        display: block;
+    }
+    .menu_btn{
+        width: 40px;
+        height: 40px;
+        background-color:#000 ;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    .menu_btn span{
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        display: block;
+        overflow: hidden;
+    }
+    .menu_btn::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 36px;
+        background-color: #ccc;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px #ccc,
+                    0px -8px 0px #ccc;
+    }
+    nav{
+        width: 40%;
+        height: calc(100vh - 50px);
+        background-color: rgba(237, 148, 148, 0.941);
+        position: absolute;
+        top: 50px;
+        right: -100%;
+        transition: .8s;
+    }
+    nav a:hover {
+    background-color: white;
+    color: rgba(237, 148, 148, 0.941);
+    }
+    nav a{
+        display: block;
+        text-decoration: none;
+        color:white ;
+        padding: 10px 20px;
+        border-bottom: 1px solid white;
+    }
+    #menu_control:checked ~ .header nav{
+        right: 0;
+    }
+    @media screen and (min-width:768px){
+        .menu_btn{display: none;}
+        body { 
+            width: 30%;
+            margin: 0 auto;}
+        main {
+            height: auto;
+          	max-width: 100%;
+        }
+        .header{
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(237, 148, 148, 0.941);
+            align-items: center;
+        }
+        nav{
+            position: relati ve;
+            right: 0;
+            display: flex;
+            width: auto;
+            height: auto;
+            top: 0;
+            background-color: transparent;
+        }
+        nav a{
+            border-bottom: none;
+        }
+    }
+    body {
+        width: 100%; 
+        min-width: 600px; 
+        max-width: 960px;		
+        background: beige;
+        margin: 0 auto;
+    }	
+    header {
+        display:flex;justify-content: center;align-items: center;
+        width: 100%;
+        height: 80px;	  
+        background: #eaeaea;		
+    }	
+    main {
+        width: 51%;
+        height: 400px;
+        background: deepskyblue;
+        float: left;	
+    }
+    aside {
+        width: 48%;
+        height: 400px;		
+        background: orange;
+        float: right;	
+    }
+    footer {
+        width: 100%;
+        background: #eaeaea;		
+        clear: both;        
+    }	
+</style>
+</head>
+<body>
+<header><h1 id="seven">作品成果與個人字介</h1></header>
+<input type="checkbox" name="" id="menu_control">
+
+<div class="header">
+    <h1 class="logo">
+        <a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html"target="_blank">
+            <img src="https://i.imgur.com/tCLFr5w.png"></a>
+    </h1>
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+    <nav>
+    <a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html" >書審</a>
+    <a href="https://simonsohai.github.io/myself/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9.html">個人介紹</a>
+    <a href="https://simonsohai.github.io/learning/%E8%87%AA%E5%AD%B8%E7%B6%B2%E7%AB%99.html">討論與自學網站</a>
+    <a href="https://simonsohai.github.io/-01/%E8%AD%89%E7%85%A7.html">證照</a>
+    <a href="https://drive.google.com/file/d/1LEexkL4yMiArCTzPWdxPPu22Rj-PsSvq/view?usp=sharing">專題製作</a>
+    <a href="https://simonsohai.github.io/-/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A.html">聯絡資訊</a>
+    </nav>
+</div>
+    <main>
+        <h1>郭子綸</h1>
+        <h2>Simon</h2>
+        <img style="width:50%; height:auto; display:inline-block;margin-left:0px;" src="https://i.imgur.com/g1548eN.jpeg">
+        <img style="width:50%;height:auto;display:inline-block;margin-left:-4px;" src="https://i.postimg.cc/QxDNYb2r/orig.png">
+    </main>
+    <aside>
+        <h1 id="seven">作品集</h1>
+        <hr>
+        <div>
+            <h1 id="one"><a href="https://simonsohai.github.io/RWD/RWD%E5%9B%9E%E6%87%89%E6%98%AF%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88.html">RWD回應式網站</a></h1>
+            <hr>
+            <h1 id="two"><a href="https://simonsohai.github.io/C/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A8%8B%E5%BC%8F.html">計算機程式</a></h1>
+            <hr>
+            <h1 id="two"><a href="https://simonsohai.github.io/C-plus/%E7%89%A9%E4%BB%B6%E5%B0%8E%E9%A0%85%E8%A8%AD%E8%A8%88.html">物件導向設計</a></h1>
+            <hr>
+            <h1 id="two"><a href="https://simonsohai.github.io/PyThon/%E9%87%91%E8%9E%8D%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88.html">金融程式設計與應用(PyThon程式設計)</a></h1>
+            <img style="width: 100%;height:auto;" src="https://i.postimg.cc/fyYWSs7P/image.png">
+        </div>
+    </aside>
+    <footer><h2 id="seven">感謝參閱</h2></footer>
+</body>
+</html>
